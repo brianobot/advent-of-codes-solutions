@@ -1,6 +1,7 @@
 use std::fs;
 use std::collections::HashSet;
 
+
 fn get_common_factors(number: i32) -> Vec<i32> {
     (1..number).filter(|i| number % i == 0).collect()
 }
@@ -50,7 +51,6 @@ fn get_invalid_id_sum(id_ranges: &str) -> i64 {
 
 fn main() {
     let content = fs::read_to_string("2025/data/day_2_input.txt").expect("Could not Read Input File");
-    
     let result = get_invalid_id_sum(&content);
     println!("Total Invalid Id Sum = {result}");
 
