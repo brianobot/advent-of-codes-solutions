@@ -1,29 +1,28 @@
 use std::fs;
-use std::collections::HashSet;
 
 
-fn get_common_factors(number: i32) -> Vec<i32> {
-    (1..number).filter(|i| number % i == 0).collect()
+fn get_common_factors(number: usize) -> Vec<usize> {
+    (1..number).filter(|i| number % i == 0).map(|x| x as usize).collect()
 }
 
 fn id_is_valid(id: i64) -> bool {
     let str_form = id.to_string();
-    let str_len = str_form.len() as i32;
+    let str_len = str_form.len();
     
-    let common_factors = get_common_factors(str_len);
-    for common_factor in common_factors {
-        let mut parts: HashSet<&str> = HashSet::new();
-        let mut index = (0, common_factor);
-        while index.1 <= str_len {
-            let part = &str_form[index.0 as usize..index.1 as usize];
-            parts.insert(&part);
-            index = (index.0 + common_factor, index.1 + common_factor);
-        }
-    
-        if parts.len() == 1 {
-            return false
-        }
+    for common_factor in get_common_factors(str_len) {
+        let first_chunk = &str_form[..common_factor];
+        let mut all_same = true;
         
+        for chunk in str_form.as_bytes().chunks(common_factor) {
+            if chunk != first_chunk.as_bytes() {
+                all_same = false;
+                break
+            }
+        }
+    
+        if all_same {
+            return false;
+        }
     }
     
     true
