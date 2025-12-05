@@ -29,7 +29,7 @@ def get_invalid_id_sum(id_ranges: str) -> int:
         start_index, end_index = [int(index) for index in id_range.split("-")]
         for id in range(start_index, end_index + 1):
             if not id_is_valid(id):
-                print(f"Found Invalid ID = {id}")
+                # print(f"Found Invalid ID = {id}")
                 invalid_sum += id
     return invalid_sum
     
