@@ -1,11 +1,7 @@
 
 
 def get_common_factors(number: int) -> list[int]:
-    common_factors = []
-    for i in range(1, number):
-        if number % i == 0:
-            common_factors.append(i)
-    return common_factors
+    return [item for item in range(1, number) if number % item == 0]
 
 
 def id_is_valid(id: int) -> bool:
