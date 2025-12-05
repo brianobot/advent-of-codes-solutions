@@ -1,4 +1,4 @@
-# Advent of Code Solutions
+# Advent of Code Solutions By Brian 
 
 This repository contains personal solutions to various "Advent of Code" challenges. The Advent of Code is an annual event featuring a series of programming puzzles that get progressively more challenging. The aim is to provide an opportunity to practice coding skills in a fun and festive manner.
 
