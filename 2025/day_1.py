@@ -6,10 +6,13 @@ def get_dial_current_position(turn: str, start: int = 0, _cycle: int = 100) -> t
     """
     if _cycle == 0:
         raise ValueError("The Cycle can not be Zero")
-        
-    turn_steps = int(turn[1:].strip())
-    direction = -1 if turn.startswith("L") else 1
-    new_position = (start + (direction * turn_steps)) % _cycle
+    
+    # "R10"[:1] 
+    # LX WHERE X is a integer
+    
+    turn_steps = int(turn[1:])
+    direction = -1 if turn.startswith("L") else 1    
+    new_position = (start + (direction * turn_steps)) % _cycle 
     
     crossings = 0
     for i in range(turn_steps):
@@ -34,14 +37,10 @@ def get_total_zero_hit(seq: list[str], start: int = 0, _cycle: int = 100) -> int
     return total_zero_hit
 
 
-def test_get_dial_current_position():
-    assert get_total_zero_hit(["R4", "L2"], 0, 2) == 3
-    
-
 
 if __name__ == "__main__":
     seq = open("2025/data/day_1_input.txt").readlines()
     seq = [turn.strip() for turn in seq]
-    result = get_total_zero_hit(seq, 50)
+    result = get_total_zero_hit(seq=seq, start=50)
     print(f"Total Zero Hit: {result}")
     

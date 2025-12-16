@@ -1,5 +1,6 @@
 use std::fs;
 
+    
 fn get_dial_current_position(turn: String, start: u32, _cycle: u32) -> (u32, u32) {
     if _cycle == 0 {
         panic!("The Cycle Can not be Zero");
