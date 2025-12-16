@@ -1,0 +1,14 @@
+{
+  "sysroot": "/Users/Apple/.rustup/toolchains/stable-aarch64-apple-darwin",
+  "crates": [
+    {
+      "display_name": "app",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/2025/day_4.rs",
+      "edition": "2024",
+      "deps": [],
+      "cfg": [],
+      "env": {},
+      "is_proc_macro": false
+    }
+  ]
+}

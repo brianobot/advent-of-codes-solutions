@@ -60,11 +60,14 @@ def main(grid: list[list[str]]):
     return total_accessible_paper_roll
     
 
+def read_input_data() -> list[list[str]]:
+    rows = [row.strip() for row in open("2025/data/day_4_input.txt").readlines()]
+    return [list(row) for row in rows]
+    
+
 
 if __name__ == "__main__":
-    rows = [row.strip() for row in open("2025/data/day_4_input.txt").readlines()]
-    grid = [list(row) for row in rows]
-    
+    grid = read_input_data()
     ic(grid)
     
     # total = calculate_total_accessible_paper_roll(grid)
