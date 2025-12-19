@@ -2,4 +2,3 @@
 .pytest_cache/
 venv/
 .env
-day_*
