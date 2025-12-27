@@ -32,15 +32,19 @@ def calculate_total_accessible_paper_roll(grid: list[list[str]]) -> tuple[int, l
     """
     original_grid_copy  = [row.copy() for row in grid]
     total_accessible_paper_roll = 0
+
     
     for row_index, row in enumerate(grid):
         for column_index, value in enumerate(row):
             # we only care for a spot if there is a paper roll on it
+            if value == "x":
+                original_grid_copy[row_index][column_index] = "."
             if value == "@":
                 point = (row_index, column_index)
                 if get_total_neighbors(grid, point) < 4:
                     total_accessible_paper_roll += 1
-                    original_grid_copy[row_index][column_index] = "."
+                    original_grid_copy[row_index][column_index] = "x"
+            
             
     return (total_accessible_paper_roll, original_grid_copy)
     
