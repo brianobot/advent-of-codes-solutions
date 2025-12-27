@@ -16,9 +16,22 @@ fn pairwise<T: Clone>(sequence: Vec<T>) -> Vec<(T, T)> {
     pairs
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    
+    #[test]
+    fn pairwise_works() {
+        assert_eq!(pairwise(vec![1, 2, 3]), vec![(1, 2),(2, 3)]);
+        assert_eq!(pairwise(vec![1, 2, 3, 4]), vec![(1, 2),(2, 3),(3, 4)]);
+    }
+    
+}
+
+
 fn report_is_safe(report: Vec<i32>) -> (bool, Option<usize>, Option<String>) {
     let pairs = pairwise(report);    
-    let diffs = pairs.iter().map(|(a, b)| b - a).collect::<Vec<_>>();
+    let diffs = pairs.iter().map(|(a, b): &(i32, i32)| b - a).collect::<Vec<i32>>();
     
     let mut contains_neg = false;
     let mut contains_pos = false;
@@ -26,7 +39,7 @@ fn report_is_safe(report: Vec<i32>) -> (bool, Option<usize>, Option<String>) {
     for (index, value) in diffs.iter().enumerate() {
         
         if value.abs() > 3 || value.abs() < 1 {
-            return (false, Some(index), None);
+            return (false, Some(index + 1), None);
         }
         
         if *value > 0 {
@@ -36,13 +49,29 @@ fn report_is_safe(report: Vec<i32>) -> (bool, Option<usize>, Option<String>) {
         }
         
         if contains_neg && contains_pos {
-            return (false, Some(index), None);
+            return (false, Some(index + 1), None);
         }
     }
     
     (true, None, None)
     
 }
+
+
+#[cfg(test)]
+mod tests_report_is_safe {
+    use super::*;
+    
+    #[test]
+    fn report_is_safe_works() {
+        assert_eq!(report_is_safe(vec![1, 2, 3]), (true, None, None));
+        assert_eq!(report_is_safe(vec![5, 2, 3]), (false, Some(1), None));
+        assert_eq!(report_is_safe(vec![11, 9, 6]), (true, None, None));
+    }
+    
+}
+
+
 
 fn report_is_safe_with_dampener(report: Vec<i32>) -> (bool, Option<usize>, Option<String>) {
     let mut report_copy = report.clone();
@@ -99,6 +128,6 @@ fn main() {
     
     // println!("Reports: {reports:?}");
     
-    let total = get_total_safe_report(reports, false);
+    let total = get_total_safe_report(reports, true);
     println!("Total: {total}");
 }
