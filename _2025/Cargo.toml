@@ -1,0 +1,35 @@
+[package]
+name = "_2025"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+
+[[bin]]
+name = "day_1"
+path = "day_1.rs"
+
+[[bin]]
+name = "day_2"
+path = "day_2.rs"
+
+[[bin]]
+name = "day_3"
+path = "day_3.rs"
+
+[[bin]]
+name = "day_4"
+path = "day_4.rs"
+
+[[bin]]
+name = "day_5"
+path = "day_5.rs"
+
+[[bin]]
+name = "day_6"
+path = "day_6.rs"
+
+[[bin]]
+name = "day_7"
+path = "day_7.rs"

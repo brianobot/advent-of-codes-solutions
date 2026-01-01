@@ -4,8 +4,8 @@ This repository contains personal solutions to various "Advent of Code" challeng
 
 ## Contents
 
-- **2024**: Solutions for Challenges for the Year 2024
-- **2025**: Solutions for Challenges for the year 2025 
+- **_2024**: Solutions for Challenges for the Year 2024
+- **__2025**: Solutions for Challenges for the year _2025 
 
 
 ## How to Use
@@ -16,8 +16,8 @@ Each solution reads input from a corresponding file located in the `<year>/data/
 
 - **Python**: Ensure Python is installed on your system. Run the solutions using:
   ```bash
-  python 2025/day_1.py
-  python 2025/day_2.py
+  python _2025/day_1.py
+  python _2025/day_2.py
   ```
   
 - **Rust**: Have Rust installed and use:

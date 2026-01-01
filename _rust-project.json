@@ -1,0 +1,114 @@
+{
+  "sysroot": "/Users/Apple/.rustup/toolchains/stable-aarch64-apple-darwin",
+  "crates": [
+    {
+      "display_name": "core",
+      "root_module": "/Users/Apple/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/lib.rs",
+      "edition": "2024",
+      "deps": [],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "alloc",
+      "root_module": "/Users/Apple/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/lib.rs",
+      "edition": "2024",
+      "deps": [
+        { "crate": 0, "name": "core" }
+      ],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "std",
+      "root_module": "/Users/Apple/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/std/src/lib.rs",
+      "edition": "2024",
+      "deps": [
+        { "crate": 0, "name": "core" },
+        { "crate": 1, "name": "alloc" }
+      ],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "day_2__2024",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/_2024/day_2.rs",
+      "edition": "2024",
+      "deps": [{ "crate": 2, "name": "std" }],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "day_3__2024",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/_2024/day_3.rs",
+      "edition": "2024",
+      "deps": [{ "crate": 2, "name": "std" }],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "day_4",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/_2025/day_4.rs",
+      "edition": "2024",
+      "deps": [{ "crate": 2, "name": "std" }],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "day_5",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/_2025/day_5.rs",
+      "edition": "2024",
+      "deps": [{ "crate": 2, "name": "std" }],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    },
+    {
+      "display_name": "day_6",
+      "root_module": "/Users/Apple/Documents/advent-of-codes/_2025/day_6.rs",
+      "edition": "2024",
+      "deps": [{ "crate": 2, "name": "std" }],
+      "cfg": [
+        "target_arch=\"aarch64\"",
+        "target_os=\"macos\"",
+        "unix"
+      ],
+      "env": {},
+      "is_proc_macro": false
+    }
+  ]
+}
