@@ -5,7 +5,7 @@ This repository contains personal solutions to various "Advent of Code" challeng
 ## Contents
 
 - **_2024**: Solutions for Challenges for the Year 2024
-- **__2025**: Solutions for Challenges for the year _2025 
+- **_2025**: Solutions for Challenges for the year _2025 
 
 
 ## How to Use
