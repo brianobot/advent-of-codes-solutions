@@ -2,6 +2,7 @@ use std::cmp;
 use std::fs;
 
 
+#[allow(dead_code)]
 fn calculate_total_distance_diff(locations_a: Vec<u32>, locations_b: Vec<u32>) -> u32 {
     let mut location_a = locations_a.clone();
     let mut location_b = locations_b.clone();

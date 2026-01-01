@@ -49,6 +49,7 @@ fn get_total_fresh_items(fresh_ids: Vec<String>) -> i64 {
     total
 }
 
+#[allow(dead_code)]
 fn get_total_available_fresh_items(fresh_ids: Vec<String>, available_ids: Vec<String>) -> i32 {
     let mut total = 0;
     
