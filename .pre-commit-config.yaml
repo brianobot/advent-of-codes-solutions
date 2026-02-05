@@ -37,3 +37,27 @@ repos:
           - types-requests  # If you use requests
           - types-setuptools # This usually replaces what pkg-resources needed
           - types-PyYAML     # If you use YAML configs
+
+  # 5. Rust Tools (Local - uses your system cargo)
+  - repo: local
+    hooks:
+      - id: rustfmt
+        name: rustfmt
+        entry: cargo fmt --all -- --check
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: cargo-check
+        name: cargo-check
+        entry: cargo check
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: clippy
+        name: clippy
+        entry: cargo clippy -- -D warnings
+        language: system
+        types: [rust]
+        pass_filenames: false
