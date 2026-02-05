@@ -5,8 +5,8 @@ This repository contains personal solutions to various "Advent of Code" challeng
 ## Contents
 
 - **[_2024](_2024)**: Solutions for Challenges for the Year 2024
-- **[_2025](_2025)**: Solutions for Challenges for the year _2025
-- **[_2026](_2026)**: Solutions for Challenges for the year _2026
+- **[_2025](_2025)**: Solutions for Challenges for the Year 2025
+- **[_2026](_2026)**: Solutions for Challenges for the Year 2026
 
 
 ## How to Use
