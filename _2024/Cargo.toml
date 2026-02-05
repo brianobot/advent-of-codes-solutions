@@ -2,6 +2,7 @@
 name = "_2024"
 version = "0.1.0"
 edition = "2024"
+authors = ["Brian Obot <brianobot9@gmail.com>"]
 
 [dependencies]
 
@@ -25,4 +26,3 @@ path = "day_4.rs"
 [[bin]]
 name = "day_5"
 path = "day_5.rs"
-
