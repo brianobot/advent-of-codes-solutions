@@ -1,0 +1,11 @@
+[package]
+name = "_2015"
+version = "0.1.0"
+edition = "2024"
+authors = ["Brian Obot <brianobot9@gmail.com>"]
+
+[dependencies]
+
+[[bin]]
+name = "day_1"
+path = "day_1.rs"
