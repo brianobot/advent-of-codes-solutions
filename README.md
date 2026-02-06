@@ -4,6 +4,15 @@ This repository contains personal solutions to various "Advent of Code" challeng
 
 ## Contents
 
+- **[_2015](_2015)**: Solutions for Challenges for the Year 2015
+- **[_2016](_2016)**: Solutions for Challenges for the Year 2016
+- **[_2017](_2017)**: Solutions for Challenges for the Year 2017
+- **[_2018](_2018)**: Solutions for Challenges for the Year 2018
+- **[_2019](_2019)**: Solutions for Challenges for the Year 2019
+- **[_2020](_2020)**: Solutions for Challenges for the Year 2020
+- **[_2021](_2021)**: Solutions for Challenges for the Year 2021
+- **[_2022](_2022)**: Solutions for Challenges for the Year 2022
+- **[_2023](_2023)**: Solutions for Challenges for the Year 2023
 - **[_2024](_2024)**: Solutions for Challenges for the Year 2024
 - **[_2025](_2025)**: Solutions for Challenges for the Year 2025
 - **[_2026](_2026)**: Solutions for Challenges for the Year 2026
