@@ -30,7 +30,3 @@ path = "day_5.rs"
 [[bin]]
 name = "day_6"
 path = "day_6.rs"
-
-[[bin]]
-name = "day_7"
-path = "day_7.rs"

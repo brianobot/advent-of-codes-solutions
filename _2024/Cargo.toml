@@ -18,11 +18,3 @@ path = "day_2.rs"
 [[bin]]
 name = "day_3"
 path = "day_3.rs"
-
-[[bin]]
-name = "day_4"
-path = "day_4.rs"
-
-[[bin]]
-name = "day_5"
-path = "day_5.rs"

@@ -1,7 +1,6 @@
 use std::cmp;
 use std::fs;
 
-
 #[allow(dead_code)]
 fn calculate_total_distance_diff(locations_a: Vec<u32>, locations_b: Vec<u32>) -> u32 {
     /*
@@ -21,39 +20,45 @@ fn calculate_total_distance_diff(locations_a: Vec<u32>, locations_b: Vec<u32>) -
     }
 
     total
- }
+}
 
+fn calculate_total_similarity_score(locations_a: Vec<i32>, locations_b: Vec<i32>) -> i32 {
+    /*
+    Takes 2 list of integers and calculates the total similarity score for each value in the first list
+    the similarity score is the product of the item in the first list and the number of occurrence of that value
+    in the second list.
+    */
+    let mut total = 0;
 
- fn calculate_total_similarity_score(locations_a: Vec<i32>, locations_b: Vec<i32>) -> i32 {
-     /*
-     Takes 2 list of integers and calculates the total similarity score for each value in the first list
-     the similarity score is the product of the item in the first list and the number of occurrence of that value
-     in the second list.
-     */
-     let mut total = 0;
+    for location_id in locations_a {
+        let similarity_score = locations_b
+            .iter()
+            .filter(|item| **item == location_id)
+            .count() as i32
+            * location_id;
+        total += similarity_score;
+    }
 
-     for location_id in locations_a {
-         let similarity_score = locations_b.iter().filter(|item| **item == location_id).count() as i32 * location_id;
-         total += similarity_score;
-     }
+    total
+}
 
-     total
- }
+fn main() {
+    let mut list_a = Vec::new();
+    let mut list_b = Vec::new();
 
+    let content =
+        fs::read_to_string("_2024/data/day_1_input.txt").expect("Failed to Read Input File");
 
- fn main() {
-     let mut list_a = Vec::new();
-     let mut list_b = Vec::new();
+    for line in content.lines() {
+        let numbers = line
+            .split_whitespace()
+            .map(|item| item.parse::<i32>().expect("Fail to convert to integer"))
+            .collect::<Vec<_>>();
 
-     let content = fs::read_to_string("_2024/data/day_1_input.txt").expect("Failed to Read Input File");
+        list_a.push(numbers[0]);
+        list_b.push(numbers[1]);
+    }
 
-     for line in content.lines() {
-         let numbers = line.split_whitespace().map(|item| item.parse::<i32>().expect("Fail to convert to integer")).collect::<Vec<_>>();
-
-         list_a.push(numbers[0]);
-         list_b.push(numbers[1]);
-     }
-
-     let result = calculate_total_similarity_score(list_a, list_b);
-     println!("Result = {result}");
- }
+    let result = calculate_total_similarity_score(list_a, list_b);
+    println!("Result = {result}");
+}
