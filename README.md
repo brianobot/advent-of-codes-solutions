@@ -1,6 +1,6 @@
 # Advent of Code Solutions By Brian
 
-This repository contains personal solutions to various "Advent of Code" challenges. The Advent of Code is an annual event featuring a series of programming puzzles that get progressively more challenging. The aim is to provide an opportunity to practice coding skills in a fun and festive manner.
+This repository contains personal solutions to various ["Advent of Code"](https://adventofcode.com/) challenges. The Advent of Code is an annual event featuring a series of programming puzzles that get progressively more challenging. The aim is to provide an opportunity to practice coding skills in a fun and festive manner.
 
 ## Contents
 
@@ -38,3 +38,6 @@ Each solution reads input from a corresponding file located in the `<year>/data/
 
 ## Note
 This repository acts as a personal log of solutions and may contain custom logic suited to the input format I anticipated for these challenges. Adjustments might be necessary to adapt to different or official input formats as distributed in the event.
+
+## Maintainer
+[Brian Obot](https://brianobot.tech) <brianobot9@gmail.com>
